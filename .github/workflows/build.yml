@@ -13,14 +13,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # 警告が出ていたため v4 から v5 に更新
       - name: Set up JDK
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "17"
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+      # 【削除】エラーの原因になっていた android-actions/setup-android@v3 のステップを削除しました
 
       - name: Install Android SDK packages
         run: |
