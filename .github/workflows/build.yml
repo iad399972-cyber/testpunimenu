@@ -24,7 +24,7 @@ jobs:
 
       - name: Install Android SDK packages
         run: |
-          sdkmanager --sdk_root="$ANDROID_HOME" --licenses
+          yes | sdkmanager --sdk_root="$ANDROID_HOME" --licenses
           sdkmanager --sdk_root="$ANDROID_HOME" \
             "platform-tools" \
             "platforms;android-35" \
